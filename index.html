@@ -13,17 +13,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
   }
 
   #container {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 350px; /* slightly increased for text space */
   }
 
   .stem {
     position: absolute;
-    bottom: 0;
+    bottom: 50px; /* moved up to make space for the name */
     left: 50%;
     width: 6px;
     height: 180px;
@@ -46,14 +47,14 @@
     z-index: 2;
   }
   .leaf.left {
-    bottom: 70px;
+    bottom: 120px;
     left: 10px;
     transform-origin: right center;
     animation-delay: 0s;
     transform: rotate(-15deg);
   }
   .leaf.right {
-    bottom: 70px;
+    bottom: 120px;
     right: 10px;
     transform-origin: left center;
     animation-delay: 2s;
@@ -76,7 +77,7 @@
     animation-name: bloom;
     animation-fill-mode: forwards;
     opacity: 0;
-    bottom: 190px;
+    bottom: 240px;
     left: 50%;
   }
 
@@ -132,7 +133,7 @@
 
   #glow {
     position: absolute;
-    bottom: 185px;
+    bottom: 235px;
     left: 50%;
     width: 150px;
     height: 150px;
@@ -149,6 +150,18 @@
     0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
   }
+
+  #name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e0aaff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #d08cff;
+    z-index: 10;
+  }
 </style>
 </head>
 <body>
@@ -163,6 +176,7 @@
     <div class="petal petal4"></div>
     <div class="petal petal5"></div>
     <div class="petal petal6"></div>
+    <div id="name">farah</div>
   </div>
 </body>
 </html>
